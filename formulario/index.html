@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+
+</head>
+<body>
+    <header align="center"> <!--Semântica de cabeçalho e alinhar os constituintes ao centro-->
+        <h1 size="2em" >Jornal o Fato</h1> <!--Título do site e tamanho da fonte-->
+       <p><strong>As últimas notícias em primeira mão</strong></p> <!--Parágrafo em negrito-->
+       <hr> <!--Criar linha horizontal-->
+    </header> <!--Fim do cabeçalho-->
+    <main><!--Semântica de conteúdo da página-->
+        <form method="post" action="mailto:daniel.antonio1@escolar.ifrn.edu.br"><!--Criar formulário que vai mandar informações até o email escolar de Antonio(eu)-->
+            <fieldset id="pessoais"><!--Agrupar elementos de um formulário-->
+                <img align="right" src="imagens/cadeado.png" alt="cadeado" height="220" width="280"><!--Botar imagem do cadeado, alinhado à direita, com texto alternativo (para caso a imagem não apareça) e tamanho definido-->
+                <legend align="center"> Dados Pessoais: </legend><!--Criar legenda da tag fieldset, alinhado ao centro-->
+                <p>Nome: <input placeholder="digite aqui" name="vulgo" autofocus></p><!--Campo de texto para digitar o nome, placeholder é o nome que aparece quando o campo está vazio e name é o nome do atributo que vai ser mandado ao email com algum valor-->
+                <p>Endereço de E-mail: <input placeholder="digite aqui" type="email" name="email"></p><!--Campo de texto para digitar o email-->
+                <p>Data de Nascimento: <input type="date" name="data de nascimento"></p><!--Campo de texto do tipo data-->
+                <p>Telefone: <input placeholder="digite aqui" type="tel" name="telefone"></p><!--Campo de texto para digitar o telefone-->
+                <p>Sexo: 
+                    <input type="radio" name="sexo" value="macho"> Masculino
+                    <input type="radio" name="sexo" value="femea"> Feminino
+                    <input type="radio" name="sexo" value="outro"> Outro
+                    <input type="radio" name="sexo" value="notdito"> Prefiro não dizer
+                </p><!--Campo de texto do tipo radiobox, com cada opção disponível para escolher--> 
+            </fieldset>
+            <fieldset id="endereço">
+                <img align="right" src="imagens/correio.png" alt="caixa de correio" height="200" width="220"><!--Botar imagem da caixa postal, alinhado à direita, com texto alternativo (para caso a imagem não apareça) e tamanho definido-->
+                <legend align="center"> Endereço Físico:</legend>
+                <p>Cidade: <input placeholder="digite aqui" name="cidade"></p><!--Campo de texto para digitar a cidade-->
+                <p>Estado: <input placeholder="digite aqui" name="estado"></p><!--Campo de texto para digitar o estado-->
+                <p>Rua: <input placeholder="digite aqui" name="rua"></p><!--Campo de texto para digitar o nome da rua-->
+                <p>Nº da residência: <input placeholder="digite aqui" name="número" type="number" step="0"></p><!--Campo de texto para digitar o número da residência, aceita apenas números, step é para não ser possível incrementar através das setinhas na direita-->
+                <p>CEP: <input placeholder="xxxxx-xxx" name="CEP" maxlength="9" pattern="xxxxx-xxx" type="number" step="0"></p> <!--Campo de texto para digitar o CEP, aceita apenas números, máximo de dígitos é 9, não pode ser incrementado através das setinhas e pattern é o padrão com que o texto deve ser escrito, se for diferente não aceita-->
+            </fieldset>
+            <fieldset id="final">
+                <legend align="center">Botões de Comando:</legend>
+                <img align="right" src="imagens/configurations.png" alt="administrador" height="80" width="80"><br><!--Botar imagem do administrador, alinhado à direita, com texto alternativo (para caso a imagem não apareça) e tamanho definido-->
+                <p align="center"><!--Parágrafo ordenar e alinhar os botões ao meio-->
+                    <input type="submit"><!--Botão para enviar o formulário-->
+                    <input type="reset"><!--Botão para redefinir o formulário-->
+                </p>
+            </fieldset>
+        </form>
+    </main>
+    <footer align="center"> <!--Tag semântica de rodapé e alinhar seus constituintes ao centro-->
+        <p>Desenvolvedores: Jose Ednaldo de Freitas Junior, Alex Rafael Santiago de Paiva e Antonio Daniel de Medeiros</p> <!--Parágrafo dos desenvolvedores-->
+    </footer> <!--Fim do rodapé-->
+</body>
+</html>
